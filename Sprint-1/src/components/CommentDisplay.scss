@@ -1,0 +1,42 @@
+@use '../partials/typography' as *;
+.wrapper {
+    max-width: 1280px;
+    width: 85%;
+    margin: 0 auto;
+} 
+
+.commentsList {
+
+    &__item {
+        display: flex;
+        padding: 2rem 0 0.6rem 0;
+        border-bottom: 2px solid #E1E1E1;
+    }
+
+    &__image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    &__details {
+        margin-left: 1rem;
+    }
+
+    &__owner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__name {
+        font-family: 'Avenir Next';
+       font-size: 1.2rem;
+       font-weight: bold;
+       
+    }
+    
+
+    &__text {
+        width: 90%;
+    }
+}

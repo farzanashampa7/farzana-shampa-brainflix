@@ -1,5 +1,7 @@
+// import SearchIcon from '../assets/icons/Icon-search.svg';
+
 .wrapper {
-    max-width: 1280px;
+    max-width: 1500px;
     width: 85%;
     margin: 0 auto;
 } 
@@ -18,13 +20,18 @@
     &__input {
         width: 88%;
         border-radius: 0.3rem;
-        padding: 1.2rem 1rem;
+        padding: 0.8rem 1rem;
         border: 2px solid #E1E1E1;
+        background-image: url('../assets/icons/Icon-search.svg');
+        background-repeat: no-repeat;
+        background-position: 1.5rem center;
+        background-size: 1.5rem;
+        
     }
 
     &__input[placeholder] {
         font-size: 1.3rem;
-        // padding-left: 2rem;
+        padding-left: 3.5rem;
     }
 
     &__img {
@@ -44,11 +51,18 @@
         background-color: #0095FF;
         border-color: transparent;
         width: 50vw;
+        height: 50px;
         border-radius: 0.3rem;
         color: #ffffff;
         font-size: 1.2rem;
         margin-right: 1.5rem;
+        padding-left: 2rem;
         text-transform: uppercase;
         flex-grow: 1;
+        background-image: url('../assets/icons/Icon-upload.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 1.5rem;
+
     }
 }

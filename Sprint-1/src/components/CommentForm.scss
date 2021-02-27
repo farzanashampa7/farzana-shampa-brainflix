@@ -1,0 +1,64 @@
+.comments {
+
+    &__number{
+        font-size: 4rem;
+    }
+    
+}
+
+.form {
+    display: flex;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #E1E1E1;
+    
+
+    &__image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 2rem;
+    }
+
+    &__item {
+        margin-left: 1rem;
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &__label {
+        text-transform: uppercase;
+        color: #AFAFAF;
+    }
+
+    &__text {
+        width: 65vw;
+        height: 140px;
+        margin-top: 1rem;
+        border-radius: 0.3rem;
+        border: 3px solid #E1E1E1;
+    }
+
+    &__text[placeholder] {
+        font-family: 'Avenir Next';
+        font-size: 1.2rem;
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    &__button {
+        background-color: #0095FF;
+        color: #ffffff;
+        border-color: transparent;
+        padding: 1rem 0;
+        width: 65vw;
+        border-radius: 0.3rem;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+
+    }
+}
