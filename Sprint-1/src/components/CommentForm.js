@@ -1,9 +1,9 @@
-import './CommentForm.scss';
+// import './CommentForm.scss';
 import MohanMuruge from '../assets/images/Mohan-muruge.jpg';
 
 const CommentForm = () => {
     return (
-        <section className='form wrapper'>
+        <section className='form'>
             <img className='form__image' src={MohanMuruge} alt='Image of user' />
             <form className='form__item'>
                 <div className='form__input'>

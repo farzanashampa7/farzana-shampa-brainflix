@@ -1,0 +1,75 @@
+.hero {
+    &__video[poster] {
+        width: 100%;
+    }
+
+    &__video[controls] {
+        width: 100%;
+    }
+}
+
+.video {
+    &__title {
+        width: 90%;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    &__info {
+        display: flex;
+        
+        
+        
+    }
+
+    &__channel {
+        margin: 0;
+        font-size: clamp(1rem, 1.1rem, 1.2rem);
+        font-weight: medium;
+    
+    }
+
+    &__date {
+        color: #AFAFAF;
+        margin-left: 1.3rem;
+        font-size: 1rem;
+    }
+
+    &__react {
+        display: flex;
+        padding:1.5rem 0;
+        border-bottom: 2px solid #E1E1E1;
+    }
+
+    &__views {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icons {
+        width: 30px;
+    }
+
+
+    &__viewNumber {
+        color: #323232;
+        margin-left: 0.3rem;
+    }
+
+    &__likes {
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+    }
+
+    &__likeNumber {
+        color: #323232;
+        margin-left: 0.3rem;
+    }
+
+    &__description {
+        line-height: 1.5rem;
+        font-size: 1rem;
+        color: #323232;
+    }
+}

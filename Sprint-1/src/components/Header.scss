@@ -14,11 +14,11 @@
     justify-content: space-evenly;
 
     &__icon {
-        width: 180px;
+        width: 150px;
     }
 
     &__input {
-        width: 88%;
+        width: 100%;
         border-radius: 0.3rem;
         padding: 0.8rem 1rem;
         border: 2px solid #E1E1E1;
@@ -30,19 +30,18 @@
     }
 
     &__input[placeholder] {
-        font-size: 1.3rem;
+        font-size: 1rem;
         padding-left: 3.5rem;
     }
 
     &__img {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
-        object-fit: cover;
     }
 
     &__upload {
-        width: 88%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
     }
@@ -50,13 +49,11 @@
     &__button {
         background-color: #0095FF;
         border-color: transparent;
-        width: 50vw;
-        height: 50px;
         border-radius: 0.3rem;
+        height: 46px;
         color: #ffffff;
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-right: 1.5rem;
-        padding-left: 2rem;
         text-transform: uppercase;
         flex-grow: 1;
         background-image: url('../assets/icons/Icon-upload.svg');

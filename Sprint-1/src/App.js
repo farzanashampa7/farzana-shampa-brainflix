@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
+import Hero from './components/Hero';
 import Comments from './components/Comments';
 import CommentDisplay from './components/CommentDisplay';
 import VideoList from './components/VideoList';
-import data from './data/video-details.json';
+import VideoListJSON from './data/videos.json';
+import VideoDataJSON from './data/video-details.json';
 import './App.scss';
 
 
 class App extends Component {
   state = {
-    commentList: data
+    videoData: VideoDataJSON,
+    videoList: VideoListJSON,
+    videoID: VideoListJSON[0].id
   }
 
   getFormattedDay(time) {
@@ -21,15 +25,24 @@ class App extends Component {
 
   }
 
-  comment1 = this.state.commentList[0]
+  showCurrentVideoData = (videoId) => {
+    this.setState({
+      videoID: videoId
+    });
+  }
 
   render() {
+    let currentVideoID = this.state.videoID,
+      visibleVideoList = this.state.videoList.filter(item => item.id !== currentVideoID),
+      visibleVideoData = this.state.videoData.filter(item => item.id === currentVideoID)[0];
+
     return (
       <div className="App">
         <Header />
+        <Hero video={visibleVideoData} getFormattedDay={this.getFormattedDay} />
         <Comments />
-        <CommentDisplay commentList={this.comment1} getFormattedDay={this.getFormattedDay} />
-        <VideoList />
+        <CommentDisplay video={visibleVideoData} getFormattedDay={this.getFormattedDay} />
+        <VideoList videoList={visibleVideoList} showCurrentVideoData={this.showCurrentVideoData} />
       </div>
 
     )

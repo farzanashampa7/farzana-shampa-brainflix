@@ -2,14 +2,14 @@
 import './CommentDisplay.scss';
 import MohanMuruge from '../assets/images/Mohan-muruge.jpg';
 
-const CommentDisplay = ({ commentList, getFormattedDay }) => {
-    let eachComment = commentList.comments
+const CommentDisplay = ({ video, getFormattedDay }) => {
+    let eachComment = video.comments
     return (
 
         <div className='commentsList wrapper'>
             {eachComment.map(comment => {
                 return (
-                    <article className='commentsList__item' id={comment.id}>
+                    <article className='commentsList__item' key={comment.id}>
                         <img className='commentsList__image' src={MohanMuruge} alt={comment.name} />
                         <div className='commentsList__details'>
                             <div className="commentsList__owner">

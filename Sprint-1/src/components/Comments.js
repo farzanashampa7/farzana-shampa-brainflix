@@ -1,10 +1,10 @@
 import CommentForm from "./CommentForm";
-import './CommentForm.scss';
+import './Comments.scss';
 
 const Comments = () => {
     return (
         <section className='comments wrapper'>
-            <h4 className='comments_number'>3 Comments</h4>
+            <h4 className='comments__number'>3 Comments</h4>
             <CommentForm />
         </section>
     )
