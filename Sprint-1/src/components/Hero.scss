@@ -1,3 +1,7 @@
+@use '../partials/typography' as *;
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
 .hero {
     &__video[poster] {
         width: 100%;
@@ -9,41 +13,69 @@
 }
 
 .video {
+
     &__title {
         width: 90%;
         font-size: 1.4rem;
         font-weight: bold;
+
+        @include tablet {
+            font-size: 1.6rem;
+        }
     }
 
     &__info {
         display: flex;
-        
-        
-        
+    }
+
+    &__guide {
+        border-bottom: 2px solid $color-tertiary;
+
+        @include tablet {
+            display: flex;
+            flex-direction:row ;
+            justify-content: space-between;
+            padding-bottom: 1.5rem;
+        }
+    
     }
 
     &__channel {
         margin: 0;
         font-size: clamp(1rem, 1.1rem, 1.2rem);
         font-weight: medium;
+
+        @include tablet {
+            font-size: 1.3rem;
+        }
     
     }
 
     &__date {
-        color: #AFAFAF;
+        color: $color-secondary;
         margin-left: 1.3rem;
         font-size: 1rem;
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
     }
 
     &__react {
         display: flex;
         padding:1.5rem 0;
-        border-bottom: 2px solid #E1E1E1;
+        
+
+        @include tablet {
+            padding: 0;
+        }
     }
 
     &__views {
         display: flex;
         align-items: center;
+
+
     }
 
     &__icons {
@@ -52,8 +84,12 @@
 
 
     &__viewNumber {
-        color: #323232;
+        color: $color-black;
         margin-left: 0.3rem;
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
     }
 
     &__likes {
@@ -63,13 +99,24 @@
     }
 
     &__likeNumber {
-        color: #323232;
+        color: $color-black;
         margin-left: 0.3rem;
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
     }
 
     &__description {
         line-height: 1.5rem;
         font-size: 1rem;
-        color: #323232;
+        color: $color-black;
+
+        @include tablet {
+            width: 80%;
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+            padding: 2rem 0;
+        }
     }
 }

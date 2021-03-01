@@ -1,8 +1,10 @@
-.videos {
+@use '../partials/typography' as *;
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
 
+.videos {
     &__item {
         display: flex;
-        // justify-content: space-between;
         margin-bottom: 1rem;
     }
 
@@ -10,7 +12,11 @@
         font-size: 1rem;
         font-weight: bold;
         text-transform: uppercase;
-        color: #AFAFAF; 
+        color: $color-secondary; 
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
     }
 
     &__image {
@@ -18,23 +24,39 @@
         max-width: 150px;
         height: 110px;
         border-radius: 0.3rem;
-        // max-width: 40%;
+
+         @include tablet {
+            min-width: 200px;
+            height: 130px;
+         }
     }
 
     &__info {
         width: 200px;
         margin-left: 1rem;
-        // flex-shrink: 1;
+
+        @include tablet {
+            width: 300px;
+        }
     }
 
     &__description {
         font-size: 1rem;
-        color: #323232;
-        font-weight: bold;
+        color: $color-black;
+        font-weight: 700;
         width: 100%;
+
+        @include tablet {
+            font-size : 1.2rem;
+        }
     }
 
     &__channel {
-        font-size: 0.8rem;
+        font-size: 1rem;
+        color: $color-black;
+
+        @include tablet {
+            font-size : 1.1rem;
+        }
     }
 }

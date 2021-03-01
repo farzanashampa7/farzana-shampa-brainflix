@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Comments from './components/Comments';
-import CommentDisplay from './components/CommentDisplay';
-import VideoList from './components/VideoList';
+import Main from './components/Main';
 import VideoListJSON from './data/videos.json';
 import VideoDataJSON from './data/video-details.json';
 import './App.scss';
@@ -39,10 +36,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Hero video={visibleVideoData} getFormattedDay={this.getFormattedDay} />
-        <Comments />
-        <CommentDisplay video={visibleVideoData} getFormattedDay={this.getFormattedDay} />
-        <VideoList videoList={visibleVideoList} showCurrentVideoData={this.showCurrentVideoData} />
+        <Main video={visibleVideoData} videoList={visibleVideoList} getFormattedDay={this.getFormattedDay} showCurrentVideoData={this.showCurrentVideoData} />
       </div>
 
     )

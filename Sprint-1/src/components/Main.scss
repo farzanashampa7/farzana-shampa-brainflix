@@ -1,0 +1,25 @@
+@use '../partials/typography' as *;
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+.main {
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+    
+        @include desktop {
+        flex-direction: row;
+        }
+    }
+
+    &__video {
+        @include desktop {
+           flex-basis: 100vw;
+           margin-right: 2rem;
+          
+        }
+    }
+   
+    
+}

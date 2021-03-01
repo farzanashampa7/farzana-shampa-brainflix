@@ -1,4 +1,4 @@
-
+import React from 'react';
 import './CommentDisplay.scss';
 import MohanMuruge from '../assets/images/Mohan-muruge.jpg';
 
