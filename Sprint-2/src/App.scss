@@ -1,0 +1,28 @@
+@use './partials/typography' as *;
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+ 
+html {
+  box-sizing: border-box;
+  
+}
+
+.wrapper {
+    max-width: 1440px;
+    width: 85%;
+    margin: 0 auto;
+
+    @include tablet{
+        width: 95%;
+    }
+} 
+
+body {
+  margin: 0;
+  font-family: 'Avenir Next';
+
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}

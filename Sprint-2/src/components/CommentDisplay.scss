@@ -1,0 +1,59 @@
+@use '../partials/typography' as *;
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+.commentsList {
+
+    &__item {
+        display: flex;
+        padding: 2rem 0 0.6rem 0;
+        border-bottom: 2px solid #E1E1E1;
+    }
+
+    &__image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    &__details {
+        margin-left: 1rem;
+    }
+
+    &__owner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__name {
+        font-family: 'Avenir Next';
+       font-size: 1.1rem;
+       font-weight: 700;
+
+       @include tablet {
+        font-size: 1.2rem;
+    }
+       
+    }
+
+    &__date {
+        font-size: 1rem;
+        color: $color-secondary;
+
+        @include tablet {
+        font-size: 1.2rem;
+    }
+
+}
+    
+
+    &__text {
+        width: 90%;
+        line-height: 1.5rem;
+        font-size: 1rem;
+
+        @include tablet {
+            font-size : 1.1rem;
+        }
+    }
+}
