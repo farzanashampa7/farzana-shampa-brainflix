@@ -13,12 +13,12 @@ const Header = () => {
             {/* <img className='header__icon' src={Logo} alt='Brainflix Logo' /> */}
             <div className='header__form'>
                 <input className='header__input' type='text' name='search' placeholder='Search'></input>
-                <Link to='/upload'>
-                    <div className='header__upload'>
-                        <button className='header__button' type='submit'>Upload</button>
-                        <img className='header__img' src={MohanMuruge} alt='Mohan Muruge' />
-                    </div>
-                </Link>
+                {/* <Link to='/upload'> */}
+                <div className='header__upload'>
+                    <a className='header__button' href='/upload'>Upload</a>
+                    <img className='header__img' src={MohanMuruge} alt='Mohan Muruge' />
+                </div>
+                {/* </Link> */}
 
             </div>
         </header>
