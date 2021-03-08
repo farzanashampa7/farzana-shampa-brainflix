@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import './VideoList.scss';
 
 class VideoList extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    // }
 
     render() {
         const videoId = this.props.match
@@ -20,7 +17,7 @@ class VideoList extends React.Component {
                 <article className='videos__list' >
                     {visibleVideoList.map(video => {
                         return (
-                            <Link key={video.id} to={`/videos/${video.id}`}>
+                            <Link className='videos__link' key={video.id} to={`/videos/${video.id}`}>
                                 <div className='videos__item' key={video.id} id={video.id}>
                                     <img className='videos__image' src={video.image} alt={video.name} />
                                     <div className='videos__info'>

@@ -16,7 +16,6 @@ class Main extends Component {
 
     componentDidMount() {
         axios.get('https://project-2-api.herokuapp.com/videos?api_key=7a318c59-45cb-4754-b122-5ee4193fa774').then((response) => {
-            console.log(response.data)
             this.setState({
                 videoData: response.data,
                 selectedVideoId: response.data[0].id
@@ -25,7 +24,12 @@ class Main extends Component {
     }
 
     render() {
+
         const selectedVideoId = this.state.selectedVideoId;
+
+        if (selectedVideoId === null) {
+            return (<main className='main'>Loading!</main>)
+        }
 
         return (
             <main className='main'>
@@ -40,7 +44,7 @@ class Main extends Component {
                                 <section className='main__section wrapper'>
                                     <div className='main__video'>
                                         <Comments />
-                                        <CommentDisplay selectedVideoId={selectedVideoId} getFormattedDay={this.state.getFormattedDay} />
+                                        <CommentDisplay selectedVideoId={selectedVideoId} />
                                     </div>
                                 </section>
                                 <VideoList

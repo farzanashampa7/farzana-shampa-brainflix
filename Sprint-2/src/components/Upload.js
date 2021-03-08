@@ -3,12 +3,8 @@ import UpLoadImage from '../assets/images/Upload-video-preview.jpg';
 import './Upload.scss';
 
 const Upload = () => {
-
     const handleSubmit = () =>
-        // e.preventDefault();
         alert('Your video has been uploaded!')
-    // window.location.href = '/';
-
 
     return (
         <section className='upload wrapper'>
@@ -18,7 +14,7 @@ const Upload = () => {
                     <h4 className='upload__label'>Video Thumbnail</h4>
                     <img className='upload__image' src={UpLoadImage} alt='Upload preview' />
                 </div>
-                <form className='upload__form' onSubmit={() => handleSubmit()}>
+                <form className='upload__form' onSubmit={handleSubmit}>
                     <label className='upload__label'>Title your video
                         <input className='upload__input' type='text' name='text' placeholder='Add a title your video' />
                     </label>
@@ -27,15 +23,12 @@ const Upload = () => {
                     </label>
                     <div className='upload__links' >
                         <button className='upload__button' type='submit' action='/' >Publish</button>
+
                         <a className='upload__link' href='/' >Cancel </a>
                     </div>
-
                 </form>
-
             </div>
-
         </section>
-
 
     )
 

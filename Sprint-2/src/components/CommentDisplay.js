@@ -5,7 +5,7 @@ import MohanMuruge from '../assets/images/Mohan-muruge.jpg';
 
 class CommentDisplay extends Component {
     state = {
-        commentList: []
+        commentList: null
     }
 
     componentDidMount() {
@@ -27,6 +27,9 @@ class CommentDisplay extends Component {
     }
 
     render() {
+        if (this.state.commentList === null) {
+            return (<div className='commentsList wrapper'>Loading Comments</div>)
+        }
         return (
             <div className='commentsList wrapper'>
                 {this.state.commentList.map(comment => {
@@ -50,7 +53,6 @@ class CommentDisplay extends Component {
             </div>
         )
     }
-
 
 }
 

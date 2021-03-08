@@ -5,16 +5,10 @@ import LikesIcon from '../assets/icons/Icon-likes.svg';
 import './VideoPlayer.scss';
 
 class VideoPlayer extends Component {
-    // constructor(props) {
-    //     super(props);
 
     state = {
         selectedVideo: null
     }
-
-    //     this.getFormattedDay = this.getFormattedDay.bind(this);
-    //     this.makeRestCall = this.makeRestCall.bind(this);
-    // }
 
     makeRestCall() {
         const videoId = this.props.match
