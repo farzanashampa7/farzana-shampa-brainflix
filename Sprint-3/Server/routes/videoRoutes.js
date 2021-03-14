@@ -36,9 +36,12 @@ router.get('/:videoId', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+    console.log(req);
     const newVideo = {
         id: uuidv4(),
+        image: 'http://localhost:8080/static-files/images/video-list-new.jpg',
         title: req.body.title,
+        channel: req.body.channel,
         description: req.body.description
     }
 

@@ -3,13 +3,22 @@
 @use '../partials/mixins' as *;
 
 .hero {
-    // &__video[poster] {
-    //     width: 100%;
-    //     height: 80%;
-    // }
 
     &__video {
-        width: 50%;
+        height: 50vw;
+
+        @include tablet {
+            height: 50vw;
+        }
+
+        @include desktop {
+            height: 50vw;
+            max-height: 800px;
+        }
+    }
+
+    &__video[poster] {
+        object-fit: cover;
     }
 
     &__video[controls] {
@@ -23,6 +32,7 @@
         width: 90%;
         font-size: 1.4rem;
         font-weight: bold;
+
 
         @include tablet {
             font-size: 1.6rem;

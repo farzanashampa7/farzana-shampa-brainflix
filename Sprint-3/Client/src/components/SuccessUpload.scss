@@ -1,0 +1,15 @@
+@use '../partials/variables' as *;
+
+.successUpload {
+    &__title {
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    &__link {
+        text-decoration: none;
+       display: block;
+       text-align: center;
+       color: $color-primary;
+    }
+}

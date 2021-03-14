@@ -31,7 +31,7 @@ class CommentDisplay extends Component {
             return (<div className='commentsList wrapper'>Loading Comments</div>)
         }
         return (
-            <div className='commentsList wrapper'>
+            <div className='commentsList'>
                 {this.state.commentList.map(comment => {
                     return (
                         <article className='commentsList__item' key={comment.id}>

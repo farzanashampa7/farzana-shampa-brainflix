@@ -10,7 +10,6 @@ import './Main.scss';
 const APIBaseURL = 'http://localhost:8080';
 
 class Main extends Component {
-    // const {videoData, selectedVideoDetails, selectedVideoId} = this.props
     state = {
         videoData: [],
         selectedVideoDetails: [],
@@ -26,7 +25,6 @@ class Main extends Component {
     }
 
     getVideoList = (givenId) => {
-        // axios.get('https://project-2-api.herokuapp.com/videos?api_key=7a318c59-45cb-4754-b122-5ee4193fa774')
         axios.get(`${APIBaseURL}/videos`)
             .then((response) => {
                 let firstVideoId = response.data[0].id;
@@ -41,11 +39,7 @@ class Main extends Component {
     }
 
     getVideoDetails = (providedId) => {
-        // let videoId = this.props.match
-        //     ? this.props.match.params.videoId
-        //     : providedId;
         let videoId = providedId ? providedId : this.props.match.params.videoId;
-        // axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=7a318c59-45cb-4754-b122-5ee4193fa774`)
         axios.get(`${APIBaseURL}/videos/${videoId}`)
             .then((response) => {
                 this.setState({
@@ -86,7 +80,7 @@ class Main extends Component {
         return (
             <main className='main'>
                 <VideoPlayer selectedVideoDetails={selectedVideoDetails} />
-                <div className='main__videoList'>
+                <div className='main__videoList wrapper'>
                     <div className='main__videos'>
                         <VideoDetails selectedVideoDetails={selectedVideoDetails} getFormattedDay={this.getFormattedDay} />
                         <Comments />
